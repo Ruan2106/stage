@@ -11,7 +11,15 @@
 |
 */
 
-Route::get('/', 'hellocontroller@index');
+Route::get('/', 'PagesController@index');
+Route::get('/contact', 'PagesController@contact');
+Route::get('about', 'PagesController@about');
+
+Route::get('articles', 'ArticlesController@index');
+
+// ID Wordt van database meegestuurd naar de Show functie controller //
+Route::get('articles/{id}', 'ArticlesController@show');
+
 
 
 
